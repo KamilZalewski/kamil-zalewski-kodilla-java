@@ -1,5 +1,7 @@
 package com.kodilla.testing.collection;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -8,6 +10,14 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public class CollectionTestSuite {
+    @Before
+    public void before(){
+        System.out.println("Test Case: begin");
+    }
+    @After
+    public void after() {
+        System.out.println("Test Case: end");
+    }
     @Test
     public void testOddNumbersExterminatorEmptyList() {
         //Given
@@ -17,6 +27,7 @@ public class CollectionTestSuite {
         List<Integer> result = exterminator.exterminate(numbers);
         //Then
         assertEquals(0, result.size());
+    System.out.println("testOddNumbersExterminatorEmptyList is completed");
     }
 
     @Test
@@ -37,5 +48,6 @@ public class CollectionTestSuite {
         List<Integer> result = exterminator.exterminate(numbers);
         //Then
         assertEquals(expected, result);
+    System.out.println("testOddNumbersExterminatorNormalList is completed");
     }
 }
