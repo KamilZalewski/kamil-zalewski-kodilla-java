@@ -11,6 +11,7 @@ public class Triangle implements Shape{
         this.base = base;
         this.height = height;
     }
+    @Override
     public String getShapeName(){
         return shapeName;
     }
@@ -20,6 +21,7 @@ public class Triangle implements Shape{
     public double getHeight() {
         return height;
     }
+    @Override
     public double getArea(){
         double area = (base * height)/2;
         return area;

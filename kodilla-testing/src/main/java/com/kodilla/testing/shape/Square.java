@@ -12,11 +12,12 @@ public class Square implements Shape{
     public String getShapeName() {
         return shapeName;
     }
-    public String getSide() {
+    public double getSide() {
         return side;
     }
+    @Override
     public double getArea(){
-        double result = side x side; //nie wiem jak się robi potęgę
+        double result = side * side;
         return result;
     }
 }

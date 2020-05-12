@@ -1,5 +1,7 @@
 package com.kodilla.testing.shape;
 
+import org.junit.Test;
+
 import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -7,6 +9,8 @@ import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 
 public class ShapeCollectorTestSuite {
+
+    @Test
     public void testAddFigure(){
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
@@ -16,6 +20,8 @@ public class ShapeCollectorTestSuite {
         //Then
         assertEquals(1, shapeCollector.getSize());
     }
+
+    @Test
     public void testRemoveFigure(){
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
@@ -27,6 +33,8 @@ public class ShapeCollectorTestSuite {
         //Then
         assertEquals(0,shapeCollector.getSize());
     }
+
+    @Test
     public void testGetFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();

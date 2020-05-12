@@ -8,14 +8,16 @@ public class Circle implements Shape {
         this.shapeName = shapeName;
         this.circleRadius = circleRadius;
     }
+    @Override
     public String getShapeName(){
         return shapeName;
     }
     public double getCircleRadius() {
         return circleRadius;
     }
-    public Double getArea(){
-        double result = (circleRadius x circleRadius) x 3.14;//nie wiem jak inaczej wstawić liczbę pi
+    @Override
+    public double getArea(){
+        double result = (circleRadius * circleRadius) * Math.PI;
         return result;
     }
 }
