@@ -7,7 +7,7 @@ public class FirstChallenge {
             throw new ArithmeticException();
         }
             return a / b;
-        }
+    }
 
 
     public static void main(String[] args) {

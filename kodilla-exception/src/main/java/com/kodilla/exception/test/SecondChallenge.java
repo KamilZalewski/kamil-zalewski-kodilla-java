@@ -7,5 +7,5 @@ public class SecondChallenge {
             throw new Exception();
         }
             return "Done!";
-        }
     }
+}
