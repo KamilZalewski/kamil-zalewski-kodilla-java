@@ -1,4 +1,9 @@
 package com.kodilla.good.patterns.challenges.food2door;
 
-public class GlutenFreeShop {
+public class GlutenFreeShop implements Order{
+
+    @Override
+    public Order order(String supplier, String product, double quantity) {
+        return ;
+    }
 }
