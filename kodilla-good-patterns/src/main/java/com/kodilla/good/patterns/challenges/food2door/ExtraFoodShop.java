@@ -1,24 +1,15 @@
 package com.kodilla.good.patterns.challenges.food2door;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
-
-public class ExtraFoodShop implements Order{
-    String supplier;
-    String product;
-    double quantity;
+public class ExtraFoodShop implements Supplier {
 
     @Override
-    public Order order(String supplier, String product, double quantity) {
-        System.out.println("This is a new order. ");
-        return Order;
-    }
-    public void process(Order order){
-        if (supplier == "ExtraFoodShop"){
-            System.out.println("Thank You for your order in ExtraFoodShop. You ordered product: "
-                + product
-                + "in amount: "
-                + quantity
-                + ".");
-        } else System.out.println("Thank You for your visit.");
+    public boolean processOrder(String product, double quantity) {
+        if(quantity > 10){
+            System.out.println("Order cannot be managed - out of products.");
+            return false;
+        } else {
+            System.out.println("All products are available. Order is realized.");
+            return true;
+        }
     }
 }

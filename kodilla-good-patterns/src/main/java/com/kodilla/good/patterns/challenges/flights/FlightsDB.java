@@ -6,12 +6,9 @@ public class FlightsDB {
     private String departure;
     private String arrival;
 
-    private HashMap<> flightsDB = new HashMap();
-    public static void main(String[] args) {
+//    private HashMap<> flightsDB = new HashMap();
+//    public static void main(String[] args) {
 
 
-
-        }
-    }
 }
 
