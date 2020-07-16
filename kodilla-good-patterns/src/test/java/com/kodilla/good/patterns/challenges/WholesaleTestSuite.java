@@ -18,6 +18,8 @@ public class WholesaleTestSuite {
         //When
         Wholesale wholesale = new Wholesale();
         //Then
-        Assert.assertTrue(true, wholesale.processOrder(order));
+        Assert.assertTrue(wholesale.processOrder(order));
+        Assert.assertFalse(wholesale.processOrder(order1));
+        Assert.assertFalse(wholesale.processOrder(order2));
     }
 }
