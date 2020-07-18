@@ -1,19 +1,20 @@
 package com.kodilla.patterns.factory.tasks;
 
-public class ShoppingTask implements Task {
-    private String taskName;
-    private String whatToBuy;
-    private double quantity;
+public class DrivingTask implements Task{
 
-    public ShoppingTask(String taskName, String whatToBuy, double quantity) {
+    private String taskName;
+    private String where;
+    private String using;
+
+    public DrivingTask(String taskName, String where, String using) {
         this.taskName = taskName;
-        this.whatToBuy = whatToBuy;
-        this.quantity = quantity;
+        this.where = where;
+        this.using = using;
     }
 
     @Override
     public void executeTask() {
-        System.out.println("I am realizing shopping task.");
+        System.out.println("I am realizing driving task.");
     }
 
     public String getTaskName() {
@@ -37,11 +38,11 @@ public class ShoppingTask implements Task {
         }
     }
 
-    public String getWhatToBuy() {
-        return whatToBuy;
+    public String getWhere() {
+        return where;
     }
 
-    public double getQuantity() {
-        return quantity;
+    public String getUsing() {
+        return using;
     }
 }

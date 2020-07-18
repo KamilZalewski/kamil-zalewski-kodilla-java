@@ -1,23 +1,32 @@
 package com.kodilla.patterns.factory.tasks;
 
-public class ShoppingTask implements Task {
-    private String taskName;
-    private String whatToBuy;
-    private double quantity;
+public class PaintingTask implements Task {
 
-    public ShoppingTask(String taskName, String whatToBuy, double quantity) {
+    private String taskName;
+    private String color;
+    private String whatToPaint;
+
+    public PaintingTask(String taskName, String color, String whatToPaint) {
         this.taskName = taskName;
-        this.whatToBuy = whatToBuy;
-        this.quantity = quantity;
+        this.color = color;
+        this.whatToPaint = whatToPaint;
     }
 
     @Override
     public void executeTask() {
-        System.out.println("I am realizing shopping task.");
+        System.out.println("I am realizing painting task.");
     }
 
     public String getTaskName() {
         return taskName;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getWhatToPaint() {
+        return whatToPaint;
     }
 
     @Override
@@ -35,13 +44,7 @@ public class ShoppingTask implements Task {
                 System.out.println(false);
                 return false;
         }
+
     }
 
-    public String getWhatToBuy() {
-        return whatToBuy;
-    }
-
-    public double getQuantity() {
-        return quantity;
-    }
 }

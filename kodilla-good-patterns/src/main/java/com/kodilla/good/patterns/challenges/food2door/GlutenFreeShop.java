@@ -4,7 +4,7 @@ public class GlutenFreeShop implements Supplier {
 
     @Override
     public boolean processOrder(String product, double quantity) {
-        if (product.equals("pizza") || product.equals("Pizza")){
+        if (product.equals("pizza") || product.equals("Pizza")) {
             System.out.println("We don't like pizza");
             return false;
         } else {
