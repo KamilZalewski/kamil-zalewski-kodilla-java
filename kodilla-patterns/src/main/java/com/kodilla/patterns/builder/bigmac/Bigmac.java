@@ -16,6 +16,7 @@ public class Bigmac {
         this.sauce = sauce;
         this.ingredients = ingredients;
     }
+
     public static class BigmacBuilder {
         private String bun;
         private int burgers;
@@ -27,7 +28,7 @@ public class Bigmac {
             return this;
         }
 
-        public Bigmac.BigmacBuilder burgers (int burgers) {
+        public Bigmac.BigmacBuilder burgers(int burgers) {
             this.burgers = burgers;
             return this;
         }
@@ -46,6 +47,7 @@ public class Bigmac {
             return new Bigmac(bun, burgers, sauce, ingredients);
         }
     }
+
     public String getBun() {
         return bun;
     }
