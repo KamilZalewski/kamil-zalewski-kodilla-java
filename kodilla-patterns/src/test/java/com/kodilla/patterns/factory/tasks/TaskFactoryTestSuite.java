@@ -6,30 +6,27 @@ import org.junit.Test;
 public class TaskFactoryTestSuite {
 
     @Test
-    public void testPaintingTask(){
+    public void testPaintingTask() {
         //Given
         TaskFactory taskFactory = new TaskFactory();
         //When
         Task shoppingTask = taskFactory.makeTask(TaskFactory.ShoppingTask);
         //Then
-        Assert.assertEquals("Birthday shopping",shoppingTask.getTaskName());
-//        Assert.assertEquals("Wine", shoppingTask.);
-
+        Assert.assertEquals("Birthday shopping", shoppingTask.getTaskName());
     }
 
     @Test
-    public void testDrivingTask(){
+    public void testDrivingTask() {
         //Given
         TaskFactory taskFactory = new TaskFactory();
         //When
         Task paintingTask = taskFactory.makeTask(TaskFactory.PaintingTask);
         //Then
-        Assert.assertEquals("Bedroom Renovation",paintingTask.getTaskName());
-//        Assert.assertEquals("Blue", paintingTask.);
+        Assert.assertEquals("Bedroom Renovation", paintingTask.getTaskName());
     }
 
     @Test
-    public void testShoppingTask(){
+    public void testShoppingTask() {
         //Given
         TaskFactory taskFactory = new TaskFactory();
         //When
