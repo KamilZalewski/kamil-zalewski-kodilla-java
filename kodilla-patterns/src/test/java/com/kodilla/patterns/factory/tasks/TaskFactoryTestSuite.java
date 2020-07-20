@@ -6,22 +6,24 @@ import org.junit.Test;
 public class TaskFactoryTestSuite {
 
     @Test
-    public void testPaintingTask() {
+    public void testDrivingTask() {
         //Given
         TaskFactory taskFactory = new TaskFactory();
         //When
-        Task shoppingTask = taskFactory.makeTask(TaskFactory.ShoppingTask);
+        Task shoppingTask = taskFactory.makeTask(TaskFactory.DrivingTask);
         //Then
-        Assert.assertEquals("Birthday shopping", shoppingTask.getTaskName());
+        System.out.println(shoppingTask.getTaskName());
+        Assert.assertEquals("Airport lift", shoppingTask.getTaskName());
     }
 
     @Test
-    public void testDrivingTask() {
+    public void testPaintingTask() {
         //Given
         TaskFactory taskFactory = new TaskFactory();
         //When
         Task paintingTask = taskFactory.makeTask(TaskFactory.PaintingTask);
         //Then
+        System.out.println(paintingTask.getTaskName());
         Assert.assertEquals("Bedroom Renovation", paintingTask.getTaskName());
     }
 
@@ -32,6 +34,7 @@ public class TaskFactoryTestSuite {
         //When
         Task shoppingTask = taskFactory.makeTask(TaskFactory.ShoppingTask);
         //Then
+        System.out.println(shoppingTask.getTaskName());
         Assert.assertEquals("Birthday shopping", shoppingTask.getTaskName());
     }
 }
