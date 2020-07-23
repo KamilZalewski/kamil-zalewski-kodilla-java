@@ -1,0 +1,22 @@
+﻿ZADANIE 16.3
+
+
+CREATE TABLE `issues` (
+  `ID` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `ISSUESLIST_ID` bigint unsigned NOT NULL,
+  `SUMMARY` char(200) DEFAULT NULL,
+  `DESCRIPTION` varchar(500) NOT NULL,
+  `USER_ID_ASSIGNEDTO` bigint unsigned NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `ID` (`ID`),
+  KEY `USER_ID_ASSIGNEDTO` (`USER_ID_ASSIGNEDTO`),
+  KEY `ISSUESLIST_ID` (`ISSUESLIST_ID`),
+  CONSTRAINT `issues_ibfk_1` FOREIGN KEY (`USER_ID_ASSIGNEDTO`) REFERENCES `users` (`ID`),
+  CONSTRAINT `issues_ibfk_2` FOREIGN KEY (`ISSUESLIST_ID`) REFERENCES `issueslists` (`ID`)
+
+
+CREATE TABLE `issueslists` (
+  `ID` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `NAME` varchar(100) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `ID` (`ID`)
