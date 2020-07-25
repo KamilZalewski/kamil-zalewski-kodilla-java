@@ -21,23 +21,6 @@ public class DrivingTask implements Task{
         return taskName;
     }
 
-    @Override
-    public boolean isTaskExecuted() {
-        int diceRoll = (int) (Math.random() * 6 + 1);
-        System.out.println(diceRoll);
-        switch (diceRoll) {
-            case 4:
-            case 5:
-            case 6:
-                System.out.println(true);
-                return true;
-
-            default:
-                System.out.println(false);
-                return false;
-        }
-    }
-
     public String getWhere() {
         return where;
     }

@@ -1,5 +1,7 @@
 package com.kodilla.patterns.factory.tasks;
 
+import java.util.Random;
+
 public class PaintingTask implements Task {
 
     private String taskName;
@@ -27,24 +29,6 @@ public class PaintingTask implements Task {
 
     public String getWhatToPaint() {
         return whatToPaint;
-    }
-
-    @Override
-    public boolean isTaskExecuted() {
-        int diceRoll = (int) (Math.random() * 6 + 1);
-        System.out.println(diceRoll);
-        switch (diceRoll) {
-            case 4:
-            case 5:
-            case 6:
-                System.out.println(true);
-                return true;
-
-            default:
-                System.out.println(false);
-                return false;
-        }
-
     }
 
 }
