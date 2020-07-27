@@ -48,7 +48,7 @@ public class DbManagerTestSuite {
         String sqlQuery = "SELECT U.FIRSTNAME, U.LASTNAME, COUNT(*) AS POSTS_NUMBER\n" +
                 "FROM USERS U JOIN POSTS P ON U.ID = P.USER_ID\n" +
                 "GROUP BY P.USER_ID\n" +
-                "HAVING COUNT(*) = 1;";
+                "HAVING COUNT(*) >= 2;";
         Statement statement = dbManager.getConnection().createStatement();
         ResultSet rs = statement.executeQuery(sqlQuery);
 
@@ -62,6 +62,6 @@ public class DbManagerTestSuite {
         }
         rs.close();
         statement.close();
-        Assert.assertEquals(3, counter);
+        Assert.assertEquals(1, counter);
     }
 }
