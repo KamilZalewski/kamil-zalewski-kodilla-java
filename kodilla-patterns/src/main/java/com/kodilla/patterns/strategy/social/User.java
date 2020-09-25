@@ -13,7 +13,7 @@ public class User {
         return username;
     }
 
-    public String sharePost(){
+    public String sharePost() {
         return socialPublisher.share();
     }
 

@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public class WorldTestSuite {
 
     @Test
-    public void testGetPeopleQuantity(){
+    public void testGetPeopleQuantity() {
         //Given
         Country poland = new Country("Poland", new BigDecimal("38000000"));
         Country germany = new Country("Germany", new BigDecimal("83000000"));

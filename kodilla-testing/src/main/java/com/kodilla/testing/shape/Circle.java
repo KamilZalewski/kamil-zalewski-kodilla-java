@@ -8,15 +8,18 @@ public class Circle implements Shape {
         this.shapeName = shapeName;
         this.circleRadius = circleRadius;
     }
+
     @Override
-    public String getShapeName(){
+    public String getShapeName() {
         return shapeName;
     }
+
     public double getCircleRadius() {
         return circleRadius;
     }
+
     @Override
-    public double getArea(){
+    public double getArea() {
         double result = (circleRadius * circleRadius) * Math.PI;
         return result;
     }

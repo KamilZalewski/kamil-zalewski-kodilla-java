@@ -4,7 +4,7 @@ public class ExtraFoodShop implements Supplier {
 
     @Override
     public boolean processOrder(String product, double quantity) {
-        if(quantity > 10){
+        if (quantity > 10) {
             System.out.println("Order cannot be managed - out of products.");
             return false;
         } else {

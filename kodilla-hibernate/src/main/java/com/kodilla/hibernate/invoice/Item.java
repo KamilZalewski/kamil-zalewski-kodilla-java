@@ -23,6 +23,7 @@ public class Item {
         this.quantity = quantity;
         this.value = value;
     }
+
     @Id
     @GeneratedValue
     @NotNull
@@ -51,7 +52,7 @@ public class Item {
     }
 
     @ManyToOne
-    @JoinColumn (name = "INVOICE_ID")
+    @JoinColumn(name = "INVOICE_ID")
     public Invoice getInvoice() {
         return invoice;
     }

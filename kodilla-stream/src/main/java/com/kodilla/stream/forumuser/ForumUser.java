@@ -9,7 +9,7 @@ public final class ForumUser {
     private final LocalDate dateOfBirth;
     private final int publishedPosts;
 
-    public ForumUser(int userID, String userName, char sex, int yearOfBirth,int monthOfBirth,int dayOfBirth, int publishedPosts) {
+    public ForumUser(int userID, String userName, char sex, int yearOfBirth, int monthOfBirth, int dayOfBirth, int publishedPosts) {
         this.userID = userID;
         this.userName = userName;
         this.sex = sex;

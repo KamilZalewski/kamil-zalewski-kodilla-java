@@ -34,7 +34,7 @@ public class Invoice {
         return number;
     }
 
-    @OneToMany(targetEntity = Item.class,mappedBy = "invoice")
+    @OneToMany(targetEntity = Item.class, mappedBy = "invoice")
     public List<Item> getItems() {
         return items;
     }

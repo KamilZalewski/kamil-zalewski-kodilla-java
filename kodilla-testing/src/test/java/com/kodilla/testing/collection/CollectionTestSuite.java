@@ -11,13 +11,15 @@ import static org.junit.Assert.assertEquals;
 
 public class CollectionTestSuite {
     @Before
-    public void before(){
+    public void before() {
         System.out.println("Test Case: begin");
     }
+
     @After
     public void after() {
         System.out.println("Test Case: end");
     }
+
     @Test
     public void testOddNumbersExterminatorEmptyList() {
         //Given
@@ -27,11 +29,11 @@ public class CollectionTestSuite {
         List<Integer> result = exterminator.exterminate(numbers);
         //Then
         assertEquals(0, result.size());
-    System.out.println("testOddNumbersExterminatorEmptyList is completed");
+        System.out.println("testOddNumbersExterminatorEmptyList is completed");
     }
 
     @Test
-    public void testOddNumbersExterminatorNormalList(){
+    public void testOddNumbersExterminatorNormalList() {
         //Given
         ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(13);
@@ -48,6 +50,6 @@ public class CollectionTestSuite {
         List<Integer> result = exterminator.exterminate(numbers);
         //Then
         assertEquals(expected, result);
-    System.out.println("testOddNumbersExterminatorNormalList is completed");
+        System.out.println("testOddNumbersExterminatorNormalList is completed");
     }
 }

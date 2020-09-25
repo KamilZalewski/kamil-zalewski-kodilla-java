@@ -11,15 +11,15 @@ import java.util.stream.IntStream;
 public class LibraryTestSuite {
 
     @Test
-    public void testGetBooks(){
+    public void testGetBooks() {
         //Given
         Library library = new Library("TestingLibrary");
         Book bookToRemove = new Book("Tytuł książki", "Autor książki", LocalDate.of(2020, 7, 13));
         library.getBooks().add(bookToRemove);
-        library.getBooks().add(new Book("Tytuł książki1", "Autor książki1", LocalDate.of(2020,7,14)));
-        library.getBooks().add(new Book("Tytuł książki2", "Autor książki2", LocalDate.of(2020,7,15)));
-        library.getBooks().add(new Book("Tytuł książki3", "Autor książki3", LocalDate.of(2020,7,16)));
-        library.getBooks().add(new Book("Tytuł książki4", "Autor książki4", LocalDate.of(2020,7,17)));
+        library.getBooks().add(new Book("Tytuł książki1", "Autor książki1", LocalDate.of(2020, 7, 14)));
+        library.getBooks().add(new Book("Tytuł książki2", "Autor książki2", LocalDate.of(2020, 7, 15)));
+        library.getBooks().add(new Book("Tytuł książki3", "Autor książki3", LocalDate.of(2020, 7, 16)));
+        library.getBooks().add(new Book("Tytuł książki4", "Autor książki4", LocalDate.of(2020, 7, 17)));
 
         Library clonedLibrary = null;
         try {

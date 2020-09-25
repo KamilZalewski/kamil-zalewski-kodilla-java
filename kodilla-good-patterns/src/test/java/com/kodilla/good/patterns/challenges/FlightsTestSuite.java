@@ -10,25 +10,27 @@ import java.util.List;
 public class FlightsTestSuite {
 
     @Test
-    public void testFindFlightFrom(){
+    public void testFindFlightFrom() {
         //Given
         FlightsSearchEngine flightsSearchEngine = new FlightsSearchEngine();
         //When
         List<Flight> flightsFrom = flightsSearchEngine.findFlightFrom("Katowice");
         //Then
         System.out.println(flightsFrom);
-        Assert.assertEquals(2,flightsFrom.size());
+        Assert.assertEquals(2, flightsFrom.size());
     }
+
     @Test
-    public void testFindFlightTo(){
+    public void testFindFlightTo() {
         //Given
         FlightsSearchEngine flightsSearchEngine = new FlightsSearchEngine();
         //When
         List<Flight> flightsTo = flightsSearchEngine.findFlightTo("Wrocław");
         //Then
         System.out.println(flightsTo);
-        Assert.assertEquals(2,flightsTo.size());
+        Assert.assertEquals(2, flightsTo.size());
     }
+
     @Test
     public void testFindFlightThrough() {
         //Given

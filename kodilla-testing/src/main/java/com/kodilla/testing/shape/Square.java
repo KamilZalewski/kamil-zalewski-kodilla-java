@@ -1,6 +1,6 @@
 package com.kodilla.testing.shape;
 
-public class Square implements Shape{
+public class Square implements Shape {
     private String shapeName;
     private double side;
 
@@ -8,15 +8,18 @@ public class Square implements Shape{
         this.shapeName = shapeName;
         this.side = side;
     }
+
     @Override
     public String getShapeName() {
         return shapeName;
     }
+
     public double getSide() {
         return side;
     }
+
     @Override
-    public double getArea(){
+    public double getArea() {
         double result = side * side;
         return result;
     }

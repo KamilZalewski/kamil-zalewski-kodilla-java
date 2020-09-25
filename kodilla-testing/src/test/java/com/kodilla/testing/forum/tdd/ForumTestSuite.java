@@ -99,6 +99,7 @@ public class ForumTestSuite {
         //Then
         Assert.assertFalse(result);
     }
+
     @Test
     public void testRemoveCommentNotExisting() {
         //Given
@@ -114,6 +115,7 @@ public class ForumTestSuite {
         //Then
         Assert.assertFalse(result);
     }
+
     @Test
     public void testRemovePost() {
         //Given
@@ -129,6 +131,7 @@ public class ForumTestSuite {
         Assert.assertTrue(result);
         Assert.assertEquals(0, forumUser.getPostsQuantity());
     }
+
     @Test
     public void testRemoveComment() {
         //Given

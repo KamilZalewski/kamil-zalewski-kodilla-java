@@ -5,7 +5,7 @@ public class AllegroApp {
         InformationService informationService = new EmailService();
         OrderService orderService = new AllegroService();
         OrderRepository orderRepository = new DBRepository();
-        ProductOrderService service = new ProductOrderService(informationService,orderService,orderRepository);
+        ProductOrderService service = new ProductOrderService(informationService, orderService, orderRepository);
         OrderRequest orderRequest = new OrderRequest("Kamil", "1");
         OrderDto result = service.process(orderRequest);
         System.out.println(result);

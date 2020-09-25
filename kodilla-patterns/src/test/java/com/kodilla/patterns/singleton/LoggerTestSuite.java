@@ -7,11 +7,11 @@ import org.junit.Test;
 public class LoggerTestSuite {
 
     @Test
-    public void testGetLastLog(){
+    public void testGetLastLog() {
         //Given
         //When
         Logger.getInstance().log("typowa6");
         //Then
-        Assert.assertEquals("typowa6",Logger.getInstance().getLastLog());
+        Assert.assertEquals("typowa6", Logger.getInstance().getLastLog());
     }
 }

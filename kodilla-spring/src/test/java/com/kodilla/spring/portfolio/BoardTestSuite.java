@@ -33,6 +33,7 @@ public class BoardTestSuite {
         //Then
         Assert.assertEquals("Task in progress.", board.getInProgressList().getTasks().get(0));
     }
+
     @Test
     public void testTaskAddDoneList() {
         //Given

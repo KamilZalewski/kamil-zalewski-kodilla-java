@@ -80,16 +80,16 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    public void testlistBooksInHandsOf(){
+    public void testlistBooksInHandsOf() {
         //"Given"
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
 
-        LibraryUser libraryUser = new LibraryUser("John","Black","123456");
+        LibraryUser libraryUser = new LibraryUser("John", "Black", "123456");
         List<Book> resultListOf0Books = new ArrayList<>();
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultListOf0Books);
 
-        LibraryUser libraryUser1 = new LibraryUser("Steve","Nash", "234567");
+        LibraryUser libraryUser1 = new LibraryUser("Steve", "Nash", "234567");
         List<Book> resultListOf1Books = generateListOfNBooks(1);
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser1)).thenReturn(resultListOf1Books);
 
@@ -103,14 +103,14 @@ public class BookDirectoryTestSuite {
         List<Book> theListOfBooks5 = bookLibrary.listBooksInHandsOf(libraryUser2);
 
         //Then
-        assertEquals(0,theListOfBooks0.size());
-        assertEquals(1,theListOfBooks1.size());
-        assertEquals(5,theListOfBooks5.size());
+        assertEquals(0, theListOfBooks0.size());
+        assertEquals(1, theListOfBooks1.size());
+        assertEquals(5, theListOfBooks5.size());
     }
 
     private List<Book> generateListOfNBooks(int booksQuantity) {
         List<Book> resultList = new ArrayList<Book>();
-        for(int n = 1; n <= booksQuantity; n++){
+        for (int n = 1; n <= booksQuantity; n++) {
             Book theBook = new Book("Title " + n, "Author " + n, 1970 + n);
             resultList.add(theBook);
         }

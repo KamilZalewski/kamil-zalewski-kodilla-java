@@ -3,6 +3,7 @@ package com.kodilla.stream.portfolio;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -119,6 +120,7 @@ public class BoardTestSuite {
         Assert.assertEquals(1, tasks.size());
         Assert.assertEquals("HQLs for analysis", tasks.get(0).getTitle());
     }
+
     @Test
     public void testAddTaskListFindLongTasks() {
         //Given
@@ -139,7 +141,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void testAddTaskListAverageWorkingOnTask(){
+    public void testAddTaskListAverageWorkingOnTask() {
         //Given
         Board project = prepareTestData();
         //When
@@ -151,6 +153,6 @@ public class BoardTestSuite {
                 .mapToLong(t -> DAYS.between(t.getCreated(), LocalDate.now()))
                 .average().getAsDouble();
         //Then
-        Assert.assertEquals(10.0 , averageOfTasks, 0.01);
+        Assert.assertEquals(10.0, averageOfTasks, 0.01);
     }
 }

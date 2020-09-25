@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CalculatorConfiguration {
     @Bean
-    public Calculator calculator(){
+    public Calculator calculator() {
         return new Calculator(new Display());
     }
 }

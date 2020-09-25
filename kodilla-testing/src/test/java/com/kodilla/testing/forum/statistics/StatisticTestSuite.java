@@ -26,9 +26,9 @@ public class StatisticTestSuite {
         Assert.assertEquals(15, calculateStatistics.getNumberOfUsers());
         Assert.assertEquals(0, calculateStatistics.getNumberOfPosts());
         Assert.assertEquals(30, calculateStatistics.getNumberOfComments());
-        Assert.assertEquals(0, calculateStatistics.getAverageOfPostPerUser(),0.001);
-        Assert.assertEquals(2, calculateStatistics.getAverageOfCommentsPerUser(),0.001);
-        Assert.assertEquals(0, calculateStatistics.getAverageOfCommentsPerPost(),0.001);
+        Assert.assertEquals(0, calculateStatistics.getAverageOfPostPerUser(), 0.001);
+        Assert.assertEquals(2, calculateStatistics.getAverageOfCommentsPerUser(), 0.001);
+        Assert.assertEquals(0, calculateStatistics.getAverageOfCommentsPerPost(), 0.001);
     }
 
     @Test
@@ -46,9 +46,9 @@ public class StatisticTestSuite {
         Assert.assertEquals(10, calculateStatistics.getNumberOfUsers());
         Assert.assertEquals(1000, calculateStatistics.getNumberOfPosts());
         Assert.assertEquals(100, calculateStatistics.getNumberOfComments());
-        Assert.assertEquals(100, calculateStatistics.getAverageOfPostPerUser(),0.001);
-        Assert.assertEquals(10, calculateStatistics.getAverageOfCommentsPerUser(),0.001);
-        Assert.assertEquals(0.1, calculateStatistics.getAverageOfCommentsPerPost(),0.001);
+        Assert.assertEquals(100, calculateStatistics.getAverageOfPostPerUser(), 0.001);
+        Assert.assertEquals(10, calculateStatistics.getAverageOfCommentsPerUser(), 0.001);
+        Assert.assertEquals(0.1, calculateStatistics.getAverageOfCommentsPerPost(), 0.001);
     }
 
     @Test
@@ -66,9 +66,9 @@ public class StatisticTestSuite {
         Assert.assertEquals(10, calculateStatistics.getNumberOfUsers());
         Assert.assertEquals(1000, calculateStatistics.getNumberOfPosts());
         Assert.assertEquals(0, calculateStatistics.getNumberOfComments());
-        Assert.assertEquals(100, calculateStatistics.getAverageOfPostPerUser(),0.001);
-        Assert.assertEquals(0, calculateStatistics.getAverageOfCommentsPerUser(),0.001);
-        Assert.assertEquals(0, calculateStatistics.getAverageOfCommentsPerPost(),0.001);
+        Assert.assertEquals(100, calculateStatistics.getAverageOfPostPerUser(), 0.001);
+        Assert.assertEquals(0, calculateStatistics.getAverageOfCommentsPerUser(), 0.001);
+        Assert.assertEquals(0, calculateStatistics.getAverageOfCommentsPerPost(), 0.001);
     }
 
     @Test
@@ -86,9 +86,9 @@ public class StatisticTestSuite {
         Assert.assertEquals(10, calculateStatistics.getNumberOfUsers());
         Assert.assertEquals(1000, calculateStatistics.getNumberOfPosts());
         Assert.assertEquals(100, calculateStatistics.getNumberOfComments());
-        Assert.assertEquals(100, calculateStatistics.getAverageOfPostPerUser(),0.001);
-        Assert.assertEquals(10, calculateStatistics.getAverageOfCommentsPerUser(),0.001);
-        Assert.assertEquals(0.1, calculateStatistics.getAverageOfCommentsPerPost(),0.001);
+        Assert.assertEquals(100, calculateStatistics.getAverageOfPostPerUser(), 0.001);
+        Assert.assertEquals(10, calculateStatistics.getAverageOfCommentsPerUser(), 0.001);
+        Assert.assertEquals(0.1, calculateStatistics.getAverageOfCommentsPerPost(), 0.001);
     }
 
     @Test
@@ -106,9 +106,9 @@ public class StatisticTestSuite {
         Assert.assertEquals(10, calculateStatistics.getNumberOfUsers());
         Assert.assertEquals(100, calculateStatistics.getNumberOfPosts());
         Assert.assertEquals(1000, calculateStatistics.getNumberOfComments());
-        Assert.assertEquals(10, calculateStatistics.getAverageOfPostPerUser(),0.001);
-        Assert.assertEquals(100, calculateStatistics.getAverageOfCommentsPerUser(),0.001);
-        Assert.assertEquals(10, calculateStatistics.getAverageOfCommentsPerPost(),0.001);
+        Assert.assertEquals(10, calculateStatistics.getAverageOfPostPerUser(), 0.001);
+        Assert.assertEquals(100, calculateStatistics.getAverageOfCommentsPerUser(), 0.001);
+        Assert.assertEquals(10, calculateStatistics.getAverageOfCommentsPerPost(), 0.001);
     }
 
     @Test
@@ -126,9 +126,9 @@ public class StatisticTestSuite {
         Assert.assertEquals(0, calculateStatistics.getNumberOfUsers());
         Assert.assertEquals(1000, calculateStatistics.getNumberOfPosts());
         Assert.assertEquals(100, calculateStatistics.getNumberOfComments());
-        Assert.assertEquals(0, calculateStatistics.getAverageOfPostPerUser(),0.001);
-        Assert.assertEquals(0, calculateStatistics.getAverageOfCommentsPerUser(),0.001);
-        Assert.assertEquals(0.1, calculateStatistics.getAverageOfCommentsPerPost(),0.001);
+        Assert.assertEquals(0, calculateStatistics.getAverageOfPostPerUser(), 0.001);
+        Assert.assertEquals(0, calculateStatistics.getAverageOfCommentsPerUser(), 0.001);
+        Assert.assertEquals(0.1, calculateStatistics.getAverageOfCommentsPerPost(), 0.001);
     }
 
     @Test
@@ -146,9 +146,9 @@ public class StatisticTestSuite {
         Assert.assertEquals(100, calculateStatistics.getNumberOfUsers());
         Assert.assertEquals(1000, calculateStatistics.getNumberOfPosts());
         Assert.assertEquals(100, calculateStatistics.getNumberOfComments());
-        Assert.assertEquals(10, calculateStatistics.getAverageOfPostPerUser(),0.001);
-        Assert.assertEquals(1, calculateStatistics.getAverageOfCommentsPerUser(),0.001);
-        Assert.assertEquals(0.1, calculateStatistics.getAverageOfCommentsPerPost(),0.001);
+        Assert.assertEquals(10, calculateStatistics.getAverageOfPostPerUser(), 0.001);
+        Assert.assertEquals(1, calculateStatistics.getAverageOfCommentsPerUser(), 0.001);
+        Assert.assertEquals(0.1, calculateStatistics.getAverageOfCommentsPerPost(), 0.001);
     }
 
     private List<String> generateUsers(int howMany) {

@@ -14,6 +14,7 @@ public class FlightSearchEngine {
         flights.put("Paris", true);
         return flights;
     }
+
     public boolean findFlight(Flight flight) throws Exception {
 
         if (flights().containsKey(flight.getArrivalAirport())) {

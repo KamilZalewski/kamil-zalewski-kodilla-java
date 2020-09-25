@@ -15,35 +15,38 @@ public class CalculatorTestSuite {
     private Calculator calculator;
 
     @Test
-    public void testSum(){
+    public void testSum() {
         //Given
         //When
         double sum = calculator.sum(10, 5);
         //Then
-        Assert.assertEquals(15,sum,0.001);
+        Assert.assertEquals(15, sum, 0.001);
     }
+
     @Test
-    public void testSub(){
+    public void testSub() {
         //Given
         //When
         double sum = calculator.sub(10, 5);
         //Then
-        Assert.assertEquals(5,sum,0.001);
+        Assert.assertEquals(5, sum, 0.001);
     }
+
     @Test
-    public void testMul(){
+    public void testMul() {
         //Given
         //When
         double sum = calculator.mul(10, 5);
         //Then
-        Assert.assertEquals(50,sum,0.001);
+        Assert.assertEquals(50, sum, 0.001);
     }
+
     @Test
-    public void testDiv(){
+    public void testDiv() {
         //Given
         //When
         double sum = calculator.div(10, 5);
         //Then
-        Assert.assertEquals(2,sum,0.001);
+        Assert.assertEquals(2, sum, 0.001);
     }
 }

@@ -24,8 +24,8 @@ public class CalculateStatistics {
             averageOfCommentsPerUser = 0;
         }
         if (numberOfPosts != 0) {
-            averageOfCommentsPerPost = numberOfComments / (double)numberOfPosts;
-        }else {
+            averageOfCommentsPerPost = numberOfComments / (double) numberOfPosts;
+        } else {
             averageOfCommentsPerPost = 0;
         }
     }

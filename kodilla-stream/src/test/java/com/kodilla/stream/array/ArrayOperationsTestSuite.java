@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 public class ArrayOperationsTestSuite {
 
     @Test
-    public void testGetAverage(){
+    public void testGetAverage() {
         //Given
         int[] numbers = new int[20];
         numbers[0] = 5;
@@ -35,6 +35,6 @@ public class ArrayOperationsTestSuite {
         //When
         double result = ArrayOperations.getAverage(numbers);
         //Then
-        Assert.assertEquals(54.9,result,0.001);
+        Assert.assertEquals(54.9, result, 0.001);
     }
 }

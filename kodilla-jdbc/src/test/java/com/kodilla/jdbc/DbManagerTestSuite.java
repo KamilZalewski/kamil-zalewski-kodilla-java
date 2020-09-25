@@ -39,6 +39,7 @@ public class DbManagerTestSuite {
         statement.close();
         Assert.assertEquals(5, counter);
     }
+
     @Test
     public void testSelectUsersAndPosts() throws SQLException {
         //Given

@@ -37,7 +37,7 @@ public class FlightsSearchEngine {
         return flightTo;
     }
 
-    public List<Flight> findFlightThrough(String departure,String through, String arrival){
+    public List<Flight> findFlightThrough(String departure, String through, String arrival) {
         List<Flight> flightFirstSection = flightList().stream()
                 .filter(flight -> flight.getDeparture().equals(departure))
                 .filter(flight -> flight.getArrival().equals(through))
@@ -47,7 +47,7 @@ public class FlightsSearchEngine {
                 .filter(flight -> flight.getArrival().equals(arrival))
                 .collect(Collectors.toList());
 
-        List<Flight> flightCompleted = Stream.of(flightFirstSection,flightSecondSection)
+        List<Flight> flightCompleted = Stream.of(flightFirstSection, flightSecondSection)
                 .flatMap(Collection::stream)
                 .collect(Collectors.toList());
         return flightCompleted;

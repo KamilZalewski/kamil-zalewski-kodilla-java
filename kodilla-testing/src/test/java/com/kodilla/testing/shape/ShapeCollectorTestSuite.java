@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class ShapeCollectorTestSuite {
 
     @Test
-    public void testAddFigure(){
+    public void testAddFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         Circle shape = new Circle("Circle", 4);
@@ -22,7 +22,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testRemoveFigure(){
+    public void testRemoveFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         Circle shape = new Circle("Circle", 4);
@@ -31,7 +31,7 @@ public class ShapeCollectorTestSuite {
         //When
         shapeCollector.removeFigure(shape);
         //Then
-        assertEquals(0,shapeCollector.getSize());
+        assertEquals(0, shapeCollector.getSize());
     }
 
     @Test
@@ -39,12 +39,12 @@ public class ShapeCollectorTestSuite {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         //zmienne Triangle to shapeName, base, height.
-        Triangle shape = new Triangle("Triangle",3,5);
+        Triangle shape = new Triangle("Triangle", 3, 5);
         shapeCollector.addFigure(shape);
         System.out.println(shapeCollector.getSize());
         //When
         Shape result = shapeCollector.getFigure(0);
         //Then
-        assertEquals(shape,result);
+        assertEquals(shape, result);
     }
 }
