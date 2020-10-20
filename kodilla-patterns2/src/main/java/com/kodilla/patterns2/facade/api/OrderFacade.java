@@ -1,7 +1,6 @@
 package com.kodilla.patterns2.facade.api;
 
 import com.kodilla.patterns2.facade.ShopService;
-import com.sun.org.apache.xpath.internal.operations.Or;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,12 +52,12 @@ public class OrderFacade {
             }
             LOGGER.info("Order " + order + " submitted");
         } finally {
-                if (wasError) {
-                    LOGGER.info("Cancelling order " + orderId);
-                    shopService.cancelOrder(orderId);
-                }
+            if (wasError) {
+                LOGGER.info("Cancelling order " + orderId);
+                shopService.cancelOrder(orderId);
             }
         }
     }
+}
 
 
