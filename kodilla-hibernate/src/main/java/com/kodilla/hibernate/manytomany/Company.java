@@ -10,7 +10,7 @@ import java.util.List;
 
 @NamedQuery(
         name = "Company.showCompaniesUsingAnyLettersOfTheName",
-        query = "FROM Company WHERE name LIKE CONCAT :'%',:NAME,'%'"
+        query = "FROM Company WHERE name LIKE CONCAT('%',:NAME,'%')"
 )
 
 @NamedNativeQuery(

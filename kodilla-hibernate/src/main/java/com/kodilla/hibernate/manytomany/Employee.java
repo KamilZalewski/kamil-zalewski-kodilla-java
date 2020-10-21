@@ -9,7 +9,8 @@ import java.util.List;
 
 @NamedQuery(
         name = "Employee.showEmployeeUsingAnyLettersOfLastname",
-        query = "FROM Employee WHERE lastname LIKE CONCAT :'%',LASTNAME,'%'")
+        query = "FROM Employee WHERE lastname LIKE CONCAT('%',LASTNAME,'%')"
+)
 
 @NamedQuery(
         name = "Employee.showEmployeeUsingLastname",
