@@ -6,11 +6,16 @@ import com.kodilla.hibernate.manytomany.dao.CompanyDao;
 import com.kodilla.hibernate.manytomany.dao.EmployeeDao;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
-public class CompanyAndEmployeeFacadeTestSuite {
+@SpringBootTest
+@RunWith(SpringRunner.class)
+public class SearchFacadeTestSuite {
 
     @Autowired
     private CompanyDao companyDao;
@@ -19,25 +24,22 @@ public class CompanyAndEmployeeFacadeTestSuite {
     private EmployeeDao employeeDao;
 
     @Autowired
-    private CompanyFacade companyFacade;
+    private SearchFacade searchFacade;
 
-    @Autowired
-    private EmployeeFacade employeeFacade;
 
 
     @Test
     public void shouldShowCompaniesUsingFacade() {
-
         //Given
         Company softwareMachine = new Company("Software Machine");
         Company dataMaesters = new Company("Data Maesters");
         Company greyMatter = new Company("Grey Matter");
-        //When
         companyDao.save(softwareMachine);
         companyDao.save(dataMaesters);
         companyDao.save(greyMatter);
-        List<Company> list1 = companyFacade.showCompaniesUsingFacade("war");
-        List<Company> list2 = companyFacade.showCompaniesUsingFacade("gri");
+        //When
+        List<Company> list1 = searchFacade.showCompaniesUsingFacade("war");
+        List<Company> list2 = searchFacade.showCompaniesUsingFacade("gri");
         //Then
         Assert.assertEquals(1, list1.size());
         Assert.assertEquals(0, list2.size());
@@ -49,7 +51,6 @@ public class CompanyAndEmployeeFacadeTestSuite {
 
     @Test
     public void testShowEmployeeUsingFacade() {
-
         //Given
         Employee johnSmith = new Employee("John", "Smith");
         Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
@@ -58,8 +59,8 @@ public class CompanyAndEmployeeFacadeTestSuite {
         employeeDao.save(johnSmith);
         employeeDao.save(stephanieClarckson);
         employeeDao.save(lindaKovalsky);
-        List<Employee> list1 = employeeFacade.showEmployeesUsingFacade("Kov");
-        List<Employee> list2 = employeeFacade.showEmployeesUsingFacade("Zal");
+        List<Employee> list1 = searchFacade.showEmployeesUsingFacade("Kov");
+        List<Employee> list2 = searchFacade.showEmployeesUsingFacade("Zal");
         //Then
         Assert.assertEquals(1, list1.size());
         Assert.assertEquals(0, list2.size());
