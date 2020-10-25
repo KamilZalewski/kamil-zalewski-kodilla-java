@@ -50,5 +50,55 @@ public class PizzaOrderTestSuite {
         assertEquals("Pizza with tomato sauce, cheese, ham", description);
     }
 
+    @Test
+    public void TestPizzaWithHamAndOnionGetCost(){
+        //Given
+        PizzaOrder pizzaOrder = new BasicPizzaOrder();
+        pizzaOrder = new HamDecorator(pizzaOrder);
+        pizzaOrder = new OnionDecorator(pizzaOrder);
+        //When
+        BigDecimal calculatedCost = pizzaOrder.getCost();
+        //Then
+        assertEquals(new BigDecimal(20), calculatedCost);
+    }
+
+    @Test
+    public void TestPizzaWithHamAndOnionGetDescription(){
+        //Given
+        PizzaOrder pizzaOrder = new BasicPizzaOrder();
+        pizzaOrder = new HamDecorator(pizzaOrder);
+        pizzaOrder = new OnionDecorator(pizzaOrder);
+        //When
+        String description = pizzaOrder.getDescription();
+        //Then
+        assertEquals("Pizza with tomato sauce, cheese, ham, onion", description);
+    }
+
+    @Test
+    public void TestPizzaWithHamAndOnionAndExtraCheeseGetCost(){
+        //Given
+        PizzaOrder pizzaOrder = new BasicPizzaOrder();
+        pizzaOrder = new HamDecorator(pizzaOrder);
+        pizzaOrder = new OnionDecorator(pizzaOrder);
+        pizzaOrder = new ExtraCheeseDecorator(pizzaOrder);
+        //When
+        BigDecimal calculatedCost = pizzaOrder.getCost();
+        //Then
+        assertEquals(new BigDecimal(24), calculatedCost);
+    }
+
+    @Test
+    public void TestPizzaWithHamAndOnionAndExtraCheeseGetDescription(){
+        //Given
+        PizzaOrder pizzaOrder = new BasicPizzaOrder();
+        pizzaOrder = new HamDecorator(pizzaOrder);
+        pizzaOrder = new OnionDecorator(pizzaOrder);
+        pizzaOrder = new ExtraCheeseDecorator(pizzaOrder);
+        //When
+        String description = pizzaOrder.getDescription();
+        //Then
+        assertEquals("Pizza with tomato sauce, cheese, ham, onion, extra cheese", description);
+    }
+
 
 }
