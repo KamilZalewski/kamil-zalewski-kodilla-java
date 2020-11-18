@@ -10,3 +10,5 @@ include 'kodilla-spring-intro'
 include 'kodilla-stream'
 include 'kodilla-testing'
 include 'learning-git'
+include 'kodilla-testing2'
+
